@@ -8,19 +8,10 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 
-import BusinessAnalysis from "../assets/BusinessAnalyst.png";
-import SoftwareEngineering from "../assets/SoftwareEngineer.png";
-import Webdeveloper from "../assets/WebDeveloper.png";
-import UIUXDesign from "../assets/UiUxDesigner.png";
-import GraphicsDesign from "../assets/GraphicDesigner.png";
-import TechnicalWriting from "../assets/TechnicalWriter.png";
-
 // Reusable card data — keeps JSX DRY
 const services = [
   {
-    img: BusinessAnalysis,
-    alt: "Business Analysis",
-    icon: <FaScaleBalanced />,
+    icon: FaScaleBalanced,
     title: "Business Analysis",
     body: (
       <>
@@ -34,9 +25,7 @@ const services = [
     ),
   },
   {
-    img: SoftwareEngineering,
-    alt: "Software Engineering",
-    icon: <FaUserGear />,
+    icon: FaUserGear,
     title: "Software Engineering",
     body: (
       <>
@@ -50,9 +39,7 @@ const services = [
     ),
   },
   {
-    img: Webdeveloper,
-    alt: "Web Development",
-    icon: <FaCode />,
+    icon: FaCode,
     title: "Web Development",
     body: (
       <>
@@ -66,9 +53,7 @@ const services = [
     ),
   },
   {
-    img: UIUXDesign,
-    alt: "UI/UX Design",
-    icon: <FaPaintbrush />,
+    icon: FaPaintbrush,
     title: "UI/UX Design",
     body: (
       <>
@@ -82,9 +67,7 @@ const services = [
     ),
   },
   {
-    img: GraphicsDesign,
-    alt: "Graphics Design",
-    icon: <FaPalette />,
+    icon: FaPalette,
     title: "Graphics Design",
     body: (
       <>
@@ -97,9 +80,7 @@ const services = [
     ),
   },
   {
-    img: TechnicalWriting,
-    alt: "Technical Writing",
-    icon: <FaFileWord />,
+    icon: FaFileWord,
     title: "Technical Writing",
     body: (
       <>
@@ -152,44 +133,42 @@ export default function Skill() {
 
         {/* ══ Responsive flex grid ══ */}
         <div className="mt-10 flex flex-wrap justify-center gap-5">
-          {services.map(({ img, alt, icon, title, body }) => (
+          {services.map(({ icon: Icon, title, body }) => (
             <article
-              key={alt}
-              className="flex min-w-0 grow shrink basis-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors hover:border-green-500/40 sm:basis-80 lg:basis-96"
+              key={title}
+              className="group relative flex min-w-0 grow shrink basis-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-green-500/40 hover:bg-white/[0.05] sm:basis-80 lg:basis-96"
             >
-              {/* Image */}
-              <div className="w-full shrink-0">
-                <img
-                  src={img}
-                  alt={alt}
-                  className="h-48 w-full rounded-t-2xl object-cover opacity-90 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
-                />
+              {/* Green glow blob that appears on hover */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-green-500/10 blur-3xl transition-opacity duration-500 group-hover:opacity-100 sm:opacity-60"
+              />
+
+              {/* ── Icon hero ── */}
+              <div className="relative mb-5 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-500/20 to-green-500/5 text-3xl text-green-500 transition-transform duration-300 group-hover:scale-105 sm:h-20 sm:w-20 sm:text-4xl">
+                <Icon />
               </div>
 
-              {/* Content */}
-              <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
-                {/* Icon + title */}
-                <div className="flex items-center gap-3 text-xl font-bold text-green-500 sm:text-2xl">
-                  <span className="shrink-0 text-2xl sm:text-3xl">{icon}</span>
-                  <p className="min-w-0 leading-tight text-white">{title}</p>
-                </div>
+              {/* Title */}
+              <h3 className="text-xl font-bold leading-tight sm:text-2xl">
+                {title}
+              </h3>
 
-                {/* Body text */}
-                <p className="flex-1 text-sm leading-relaxed text-gray-400 sm:text-base">
-                  {body}
-                </p>
+              {/* Body text — grows to fill remaining space */}
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-400 sm:text-base">
+                {body}
+              </p>
 
-                {/* CTA pinned to the bottom */}
-                <div className="mt-auto flex justify-end pt-2">
-                  <button
-                    type="button"
-                    onClick={scrollToContact}
-                    className="flex items-center gap-2 rounded-xl bg-green-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-600 sm:text-base"
-                  >
-                    Get in touch
-                    <FaArrowRight className="text-xs" />
-                  </button>
-                </div>
+              {/* CTA pinned to the bottom */}
+              <div className="mt-6 flex justify-end pt-2">
+                <button
+                  type="button"
+                  onClick={scrollToContact}
+                  className="flex items-center gap-2 rounded-xl bg-green-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-green-600 sm:text-base"
+                >
+                  Get in touch
+                  <FaArrowRight className="text-xs" />
+                </button>
               </div>
             </article>
           ))}

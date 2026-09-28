@@ -1,6 +1,6 @@
 import { FaGithub, FaWhatsapp, FaXTwitter, FaTiktok, FaYoutube, FaArrowRight, FaGlobe } from "react-icons/fa6";
 
-import HeroImage from '/home/vascom/myPortfolio/my-project/src/assets/HeroImage.png'
+import HeroImage from '../assets/HeroImage.png'
 
 const SOCIALS = [
   { icon: FaGithub, href: "https://github.com/vascom-web", label: "GitHub" },

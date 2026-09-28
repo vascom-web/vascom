@@ -12,8 +12,8 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa6";
 
-import Logo from "/home/vascom/myPortfolio/my-project/src/assets/Logo.jpg";
-import FounderImage from "/home/vascom/myPortfolio/my-project/src/assets/Founder.jpg";
+import Logo from "../assets/Logo.jpg";
+import FounderImage from "../assets/Founder.jpg";
 
 // ══ Company info ══
 const COMPANY = {

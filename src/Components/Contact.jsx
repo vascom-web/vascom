@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 
 // ⬇️ Paste your Web3Forms access key here (from web3forms.com)
-const ACCESS_KEY = "ee6e0717-9b97-4367-b4c8-58deb10dcd97";
+const ACCESS_KEY = "f6381bea-3335-452c-b489-d2cb539350e6";
 
 const SERVICE_OPTIONS = [
   "Business Analysis",

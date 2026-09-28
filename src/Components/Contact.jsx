@@ -9,8 +9,8 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 
-// ⬇️ Paste your Web3Forms access key here
-const ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+// ⬇️ Paste your Web3Forms access key here (from web3forms.com)
+const ACCESS_KEY = "ee6e0717-9b97-4367-b4c8-58deb10dcd97";
 
 const SERVICE_OPTIONS = [
   "Business Analysis",

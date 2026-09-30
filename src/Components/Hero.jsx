@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaFacebookF,
   FaInstagram,
+  FaLinkedinIn,
   FaArrowRight,
   FaGlobe,
 } from "react-icons/fa6";
@@ -17,6 +18,7 @@ const SOCIALS = [
   { icon: FaXTwitter, href: "https://x.com/nvasatile1?s=11", label: "X (Twitter)" },
   { icon: FaFacebookF, href: "https://www.facebook.com/share/1E1jxbJ7vt/?mibextid=wwXIfr", label: "Facebook" },
   { icon: FaInstagram, href: "https://www.instagram.com/vasatilecommunication?stkn=amU2OGNxbGg1amY4", label: "Instagram" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/vasatile-communication-476270370", label: "LinkedIn" },
   { icon: FaYoutube, href: "https://youtube.com/@1st_vascom", label: "YouTube" },
 ];
 

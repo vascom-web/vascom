@@ -1,13 +1,23 @@
-import { FaGithub, FaWhatsapp, FaXTwitter, FaTiktok, FaYoutube, FaArrowRight, FaGlobe } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaWhatsapp,
+  FaXTwitter,
+  FaYoutube,
+  FaFacebookF,
+  FaInstagram,
+  FaArrowRight,
+  FaGlobe,
+} from "react-icons/fa6";
 
-import HeroImage from '../assets/HeroImage.png'
+import HeroImage from "../assets/HeroImage.png";
 
 const SOCIALS = [
   { icon: FaGithub, href: "https://github.com/vascom-web", label: "GitHub" },
   { icon: FaWhatsapp, href: "https://wa.me/2348144435028", label: "WhatsApp" },
-  { icon: FaXTwitter, href: "https://x.com/yourusername", label: "X (Twitter)" },
-  { icon: FaTiktok, href: "https://tiktok.com/@yourusername", label: "TikTok" },
-  { icon: FaYoutube, href: "https://youtube.com/@yourusername", label: "YouTube" },
+  { icon: FaXTwitter, href: "https://x.com/nvasatile1?s=11", label: "X (Twitter)" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/share/1E1jxbJ7vt/?mibextid=wwXIfr", label: "Facebook" },
+  { icon: FaInstagram, href: "https://www.instagram.com/vasatilecommunication?stkn=amU2OGNxbGg1amY4", label: "Instagram" },
+  { icon: FaYoutube, href: "https://youtube.com/@1st_vascom", label: "YouTube" },
 ];
 
 export default function Hero() {

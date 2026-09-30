@@ -17,12 +17,12 @@ const NAV_LINKS = [
 ];
 
 const SOCIALS = [
-  { icon: FaFacebookF, href: "https://facebook.com", label: "Facebook" },
-  { icon: FaXTwitter, href: "https://x.com", label: "X (Twitter)" },
-  { icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaWhatsapp, href: "https://wa.me/2348037283886", label: "WhatsApp" },
-  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
+  { icon: FaFacebookF, href: "https://www.facebook.com/share/1E1jxbJ7vt/?mibextid=wwXIfr", label: "Facebook" },
+  { icon: FaXTwitter, href: "https://x.com/nvasatile1?s=11", label: "X (Twitter)" },
+  { icon: FaInstagram, href: "https://www.instagram.com/vasatilecommunication?stkn=amU2OGNxbGg1amY4", label: "Instagram" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/vasatile-communication-476270370", label: "LinkedIn" },
+  { icon: FaWhatsapp, href: "https://wa.me/2348144435028", label: "WhatsApp" },
+  { icon: FaGithub, href: "https://github.com/vascom-web", label: "GitHub" },
 ];
 
 export default function Footer() {

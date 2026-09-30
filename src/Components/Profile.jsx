@@ -61,7 +61,7 @@ const FOUNDER = {
   name: "Uzochukwu David",
   role: "Founder & Lead Developer",
   bio: "Uzochukwu David founded Vasatile Communication in 2024 with a simple vision: give Nigerian businesses, startups, and students access to world-class technology and design without the usual agency runaround. A developer and problem-solver at heart, he leads the team with a hands-on approach from the first client conversation to the final line of code.",
-  linkedin: "https://www.linkedin.com/in/vasatile-communication-476270370/?isSelfProfile=true",
+  linkedin: "www.linkedin.com/in/vasatile-communication-476270370",
 };
 
 export default function Profile() {

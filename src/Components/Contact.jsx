@@ -159,57 +159,53 @@ export default function Contact() {
             />
           </div>
 
-          {/* Row 2: Service + Message + Button */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {/* Left column: service + button */}
-            <div className="flex flex-col gap-4">
-              <select
-                name="service"
-                value={form.service}
-                onChange={handleChange}
-                required
-                className="w-full cursor-pointer appearance-none rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300 outline-none transition focus:border-green-500 focus:bg-white/[0.05]"
-              >
-                <option value="" disabled className="bg-[#0a0f0d]">
-                  Service Needed
-                </option>
-                {SERVICE_OPTIONS.map((s) => (
-                  <option key={s} value={s} className="bg-[#0a0f0d]">
-                    {s}
-                  </option>
-                ))}
-              </select>
+          {/* Service */}
+          <select
+            name="service"
+            value={form.service}
+            onChange={handleChange}
+            required
+            className="w-full cursor-pointer appearance-none rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-gray-300 outline-none transition focus:border-green-500 focus:bg-white/[0.05]"
+          >
+            <option value="" disabled className="bg-[#0a0f0d]">
+              Service Needed
+            </option>
+            {SERVICE_OPTIONS.map((s) => (
+              <option key={s} value={s} className="bg-[#0a0f0d]">
+                {s}
+              </option>
+            ))}
+          </select>
 
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-green-600 disabled:cursor-not-allowed disabled:opacity-70"
-              >
-                {status === "loading" ? (
-                  <>
-                    <FaSpinner className="animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Message
-                    <FaPaperPlane />
-                  </>
-                )}
-              </button>
-            </div>
+          {/* Message */}
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Your Message"
+            required
+            rows={5}
+            className="w-full resize-none rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition focus:border-green-500 focus:bg-white/[0.05]"
+          />
 
-            {/* Right column: message textarea */}
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Your Message"
-              required
-              rows={5}
-              className="w-full resize-none rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition focus:border-green-500 focus:bg-white/[0.05]"
-            />
-          </div>
+          {/* Submit button */}
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-green-600 disabled:cursor-not-allowed disabled:opacity-70"
+          >
+            {status === "loading" ? (
+              <>
+                <FaSpinner className="animate-spin" />
+                Sending...
+              </>
+            ) : (
+              <>
+                Send Message
+                <FaPaperPlane />
+              </>
+            )}
+          </button>
 
           {/* Status banners */}
           {status === "success" && (
